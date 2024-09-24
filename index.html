@@ -312,7 +312,7 @@
               <div class="portfolio-info">
                 <h4>SpaceX Clone</h4>
                 <p>SpaceX Clone</p>
-                <a href="assets/img/logoproducts/spacexdiv.jpg" title="App 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="assets/img/logoproducts/spacexdiv.jpg"  data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 <a  target="_blank"  href="https://sharon812.github.io/SpaceX-Clone/" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div><!-- End Portfolio Item -->
@@ -323,7 +323,7 @@
               <div class="portfolio-info">
                 <h4>KFC Clone</h4>
                 <p>KFC Clone</p>
-                <a href="assets/img/logoproducts/KFCdiv.webp" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="assets/img/logoproducts/KFCdiv.webp"  data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                 <a target="_blank" href="https://sharon812.github.io/KFC-clone/" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div><!-- End Portfolio Item -->
@@ -333,8 +333,18 @@
               <div class="portfolio-info">
                 <h4> Linkdln Clone</h4>
                 <p>Linkdln Clone</p>
-                <a href="assets/img/logoproducts/linkdln logo.png" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="https://sharon812.github.io/Linkdein-Clone/" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                <a href="assets/img/logoproducts/linkdln logo.png"  data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a target="_blank" href="https://sharon812.github.io/Linkdein-Clone/" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+              <img src="assets/img/logoproducts/Starbucks.webp" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4> Starbucks Responsive</h4>
+                <p>Linkdln Clone</p>
+                <a href="assets/img/logoproducts/Starbucks.webp"  data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a target="_blank" href="https://sharon812.github.io/Starbucks-Responsive/" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div><!-- End Portfolio Item -->
 
@@ -391,29 +401,33 @@
           </div>
         </div>
 
-        <form action="https://formspree.io/f/mjkbqbyz" method="post" class="" data-aos="fade-up" data-aos-delay="300">
+        <form action="https://formspree.io/f/mjkbqbyz" method="post" id="contactForm" onsubmit="return validateForm()">
           <div class="row gy-4">
-
+            
             <div class="col-md-6">
-              <input type="text" name="name" class="form-control" placeholder="Your Name" required minlength="4" maxlength="20">
+              <input type="text" id="name" class="form-control" placeholder="Your Name" required minlength="3" maxlength="20">
+              <span id="nameError" class="error"></span>
             </div>
 
             <div class="col-md-6 ">
-              <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+              <input type="email" id="email" class="form-control" name="email" placeholder="Your Email" required="">
+              <span id="emailError" class="error"></span>
             </div>
 
             <div class="col-md-12">
-              <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+              <input type="text" id="subject" class="form-control" name="subject" placeholder="Subject" required="">
+              <span id="subjectError" class="error"></span>
             </div>
 
             <div class="col-md-12">
-              <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+              <textarea class="form-control" id="message" name="message" rows="6" placeholder="Message" required=""></textarea>
+              <span id="messageError" class="error"></span>
             </div>
 
             <div class="col-md-12 text-center">
 
 
-              <button class="btn btn-light" type="submit">Send Message</button>
+              <input class="btn btn-light" type="submit" value="Send message"></input>
             </div>
 
           </div>
@@ -460,6 +474,8 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
+<!--form validation-->
+  <script src="formval.js"></script>
 </body>
 
 </html>
