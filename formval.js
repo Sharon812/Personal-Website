@@ -69,7 +69,6 @@
 
 // };
 
-
 function validateForm() {
     // Clear previous errors
     document.getElementById("nameError").innerText = "";
@@ -87,16 +86,17 @@ function validateForm() {
     var valid = true;
 
     // Name validation
+    var namePattern = /^[A-Za-z\s]+$/;
     if (name.trim() === "") {
         document.getElementById("nameError").innerText = "Please enter your name.";
         valid = false;
-    } else if (name.trim().length < 2) {
-        document.getElementById("nameError").innerText = "Name cannot be just spaces.";
+    } else if (!namePattern.test(name.trim())) {
+        document.getElementById("nameError").innerText = "Name should only contain letters and spaces.";
         valid = false;
     }
 
     // Email validation
-    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+     emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (email.trim() === "") {
         document.getElementById("emailError").innerText = "Please enter your email.";
         valid = false;
